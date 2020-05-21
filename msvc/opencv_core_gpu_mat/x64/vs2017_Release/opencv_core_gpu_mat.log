@@ -1,0 +1,7 @@
+﻿  Compiling CUDA source file ..\..\modules\core\src\cuda\gpu_mat.cu...
+  
+  C:\Development\op3d_active\opencv-4.1.0\msvc\opencv_core_gpu_mat>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\bin\nvcc.exe" -gencode=arch=compute_30,code=\"sm_30,compute_30\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.16.27023\bin\HostX86\x64" -x cu  -I.. -I..\..\modules\cudev\include -I..\..\modules\core\include -I"C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2020.1.216\windows\ipp\include" -I"C:\Program Files (x86)\Visual Leak Detector\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include"     --keep-dir x64\vs2017_Release -maxrregcount=0  --machine 64 --compile -cudart static     -DHAVE_OPENCV_CUDEV -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Fdx64\vs2017_Release\opencv_core_gpu_mat.pdb /FS /Zi  /MD " -o x64\vs2017_Release\gpu_mat.cu.obj "C:\Development\op3d_active\opencv-4.1.0\modules\core\src\cuda\gpu_mat.cu" 
+C:\Development\op3d_active\opencv-4.1.0\msvc\opencv2/opencv_modules.hpp(15): warning C4005: 'HAVE_OPENCV_CUDEV': macro redefinition
+C:\Development\op3d_active\opencv-4.1.0\msvc\opencv2/opencv_modules.hpp(15): warning C4005: 'HAVE_OPENCV_CUDEV': macro redefinition
+  gpu_mat.cu
+  opencv_core_gpu_mat.vcxproj -> C:\Development\op3d_active\opencv-4.1.0\msvc\x64\vs2017_Release\opencv_core_gpu_mat.lib

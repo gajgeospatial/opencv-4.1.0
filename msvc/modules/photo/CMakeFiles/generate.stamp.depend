@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Development/op3d_active/opencv-4.1.0/cmake/templates/dllmain.cpp.in
+C:/Development/op3d_active/opencv-4.1.0/cmake/templates/vs_version.rc.in
+C:/Development/op3d_active/opencv-4.1.0/modules/photo/CMakeLists.txt
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/photo/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_nlm.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/photo/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_nlm.cu.obj.depend
+C:/Program Files/CMake/share/cmake-3.14/Modules/FindCUDA/run_nvcc.cmake

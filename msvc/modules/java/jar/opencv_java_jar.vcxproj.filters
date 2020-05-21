@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\49aa945991bce0391d89bdf02149bc7b\opencv_java_jar.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\d7b46fe147c1992a70ee23c635ccbb32\opencv_java_jar.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\java\jar\CMakeFiles\opencv_java_jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7279CE8B-7241-3FB4-9705-D5B0C64F8FB7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

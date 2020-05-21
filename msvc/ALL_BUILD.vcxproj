@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0477DF17-F7EC-3497-8344-683AFA46DD18}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\icv\include;C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\iw\include;C:\Development\op3d_active\opencv-4.1.0\msvc;C:\Development\op3d_active\gdal-3.1.0\frmts;C:\Development\op3d_active\gdal-3.1.0\alg;C:\Development\op3d_active\gdal-3.1.0\gcore;C:\Development\op3d_active\gdal-3.1.0\port;C:\Development\op3d_active\gdal-3.1.0\ogr;C:\Development\op3d_active\gdal-3.1.0\ogr\ogrsf_frmts;C:\Development\op3d_active\eigen-3.3.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\icv\include;C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\iw\include;C:\Development\op3d_active\opencv-4.1.0\msvc;C:\Development\op3d_active\gdal-3.1.0\frmts;C:\Development\op3d_active\gdal-3.1.0\alg;C:\Development\op3d_active\gdal-3.1.0\gcore;C:\Development\op3d_active\gdal-3.1.0\port;C:\Development\op3d_active\gdal-3.1.0\ogr;C:\Development\op3d_active\gdal-3.1.0\ogr\ogrsf_frmts;C:\Development\op3d_active\eigen-3.3.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Development/op3d_active/opencv-4.1.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Development/op3d_active/opencv-4.1.0 -BC:/Development/op3d_active/opencv-4.1.0/msvc --check-stamp-file C:/Development/op3d_active/opencv-4.1.0/msvc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Development/op3d_active/opencv-4.1.0/CMakeLists.txt;C:\Development\op3d_active\VTK-8.2.0\CMake\vtkModuleAPI.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\VTKConfig.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\VTKConfigVersion.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\VTKTargets.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonColor.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonComputationalGeometry.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonDataModel.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonExecutionModel.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonMath.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonMisc.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonSystem.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonTransforms.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkDICOMParser.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersExtraction.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersGeneral.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersGeometry.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersModeling.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersSources.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersStatistics.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersTexture.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOExport.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOGeometry.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOImage.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOLegacy.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOPLY.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOXML.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOXMLParser.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkImagingCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkImagingFourier.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkInteractionStyle.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkMetaIO.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingContext2D.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingFreeType.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingGL2PSOpenGL2.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingLOD.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingOpenGL2.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkdoubleconversion.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkeigen.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkexpat.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkfreetype.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkgl2ps.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkglew.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkjpeg.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkkwiml.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtklz4.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtklzma.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkpng.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtksys.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtktiff.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkutf8.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkzlib.cmake;C:\Development\op3d_active\eigen-3.3.7\msvc\Eigen3Config.cmake;C:\Development\op3d_active\eigen-3.3.7\msvc\Eigen3ConfigVersion.cmake;C:\Development\op3d_active\eigen-3.3.7\msvc\Eigen3Targets.cmake;C:\Development\op3d_active\opencv-4.1.0\3rdparty\ippicv\ippicv.cmake;C:\Development\op3d_active\opencv-4.1.0\CMakeLists.txt;C:\Development\op3d_active\opencv-4.1.0\cmake\FindCUDNN.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVCRTLinkage.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVCompilerOptimizations.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVCompilerOptions.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectApacheAnt.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectCUDA.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectCXXCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectDirectX.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectOpenCL.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectPython.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectTrace.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectVTK.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDownload.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVExtraTargets.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindFrameworks.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindIPP.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindIPPIW.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLAPACK.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsGUI.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsGrfmt.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsPerf.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsVideo.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindOpenEXR.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindProtobuf.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindWebP.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenABI.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenAndroidMK.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenConfig.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenHeaders.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenSetupVars.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVMinDepVersions.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVModule.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVPCHSupport.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVPackaging.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVUtils.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVVersion.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\checks\directx.cpp;C:\Development\op3d_active\opencv-4.1.0\cmake\checks\opencl.cpp;C:\Development\op3d_active\opencv-4.1.0\cmake\checks\win32uitest.cpp;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\OpenCVConfig-version.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\OpenCVConfig.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\OpenCVConfig.root-WIN32.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\cmake_uninstall.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\custom_hal.hpp.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\cv_cpu_config.h.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\cvconfig.h.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\opencv_modules.hpp.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\setup_vars_win32.cmd.in;C:\Development\op3d_active\opencv-4.1.0\modules\core\include\opencv2\core\version.hpp;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeCCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeCXXCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeRCCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeConfigurableFile.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindGDAL.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindJNI.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindJasper.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindProtobuf.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\ProcessorCount.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.14\Templates\CPackConfig.cmake.in;C:\Development\op3d_active\opencv-4.1.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Development/op3d_active/opencv-4.1.0/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Development/op3d_active/opencv-4.1.0 -BC:/Development/op3d_active/opencv-4.1.0/msvc --check-stamp-file C:/Development/op3d_active/opencv-4.1.0/msvc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Development/op3d_active/opencv-4.1.0/CMakeLists.txt;C:\Development\op3d_active\VTK-8.2.0\CMake\vtkModuleAPI.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\VTKConfig.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\VTKConfigVersion.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\VTKTargets.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonColor.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonComputationalGeometry.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonDataModel.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonExecutionModel.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonMath.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonMisc.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonSystem.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkCommonTransforms.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkDICOMParser.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersExtraction.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersGeneral.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersGeometry.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersModeling.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersSources.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersStatistics.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkFiltersTexture.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOExport.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOGeometry.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOImage.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOLegacy.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOPLY.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOXML.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkIOXMLParser.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkImagingCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkImagingFourier.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkInteractionStyle.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkMetaIO.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingContext2D.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingCore.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingFreeType.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingGL2PSOpenGL2.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingLOD.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkRenderingOpenGL2.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkdoubleconversion.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkeigen.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkexpat.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkfreetype.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkgl2ps.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkglew.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkjpeg.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkkwiml.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtklz4.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtklzma.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkpng.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtksys.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtktiff.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkutf8.cmake;C:\Development\op3d_active\VTK-8.2.0\msvc\lib\cmake\vtk-8.2\Modules\vtkzlib.cmake;C:\Development\op3d_active\eigen-3.3.7\msvc\Eigen3Config.cmake;C:\Development\op3d_active\eigen-3.3.7\msvc\Eigen3ConfigVersion.cmake;C:\Development\op3d_active\eigen-3.3.7\msvc\Eigen3Targets.cmake;C:\Development\op3d_active\opencv-4.1.0\3rdparty\ippicv\ippicv.cmake;C:\Development\op3d_active\opencv-4.1.0\CMakeLists.txt;C:\Development\op3d_active\opencv-4.1.0\cmake\FindCUDNN.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVCRTLinkage.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVCompilerOptimizations.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVCompilerOptions.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectApacheAnt.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectCUDA.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectCXXCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectDirectX.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectOpenCL.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectPython.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectTrace.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDetectVTK.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVDownload.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVExtraTargets.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindFrameworks.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindIPP.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindIPPIW.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLAPACK.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsGUI.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsGrfmt.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsPerf.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindLibsVideo.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindOpenEXR.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindProtobuf.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVFindWebP.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenABI.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenAndroidMK.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenConfig.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenHeaders.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVGenSetupVars.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVMinDepVersions.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVModule.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVPCHSupport.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVPackaging.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVUtils.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\OpenCVVersion.cmake;C:\Development\op3d_active\opencv-4.1.0\cmake\checks\directx.cpp;C:\Development\op3d_active\opencv-4.1.0\cmake\checks\opencl.cpp;C:\Development\op3d_active\opencv-4.1.0\cmake\checks\win32uitest.cpp;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\OpenCVConfig-version.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\OpenCVConfig.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\OpenCVConfig.root-WIN32.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\cmake_uninstall.cmake.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\custom_hal.hpp.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\cv_cpu_config.h.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\cvconfig.h.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\opencv_modules.hpp.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\setup_vars_win32.cmd.in;C:\Development\op3d_active\opencv-4.1.0\modules\core\include\opencv2\core\version.hpp;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeCCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeCXXCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeRCCompiler.cmake;C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\3.14.3\CMakeSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeConfigurableFile.in;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeFindJavaCommon.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindCUDA.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindCUDA\select_compute_arch.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindGDAL.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindJNI.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindJPEG.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindJasper.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPNG.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindProtobuf.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindPythonInterp.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\ProcessorCount.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\CMake\share\cmake-3.14\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.14\Templates\CPackConfig.cmake.in;C:\Development\op3d_active\opencv-4.1.0\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\ZERO_CHECK.vcxproj">
+      <Project>{AC6C6E05-5015-303A-9CFD-F61950C6B200}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippiw\ippiw.vcxproj">
+      <Project>{CE0410D1-AC63-3F2D-A2CF-7B60FFBDCBCC}</Project>
+      <Name>ippiw</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ittnotify\ittnotify.vcxproj">
+      <Project>{98AC9E89-EEFF-3A81-ADB1-CD76FFC8C6AF}</Project>
+      <Name>ittnotify</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\libjasper\libjasper.vcxproj">
+      <Project>{0F630D90-990A-301D-AFE2-ADFE74625284}</Project>
+      <Name>libjasper</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\libtiff\libtiff.vcxproj">
+      <Project>{772E82BA-B427-35F4-A317-35D3764249A8}</Project>
+      <Name>libtiff</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\apps\annotation\opencv_annotation.vcxproj">
+      <Project>{0F051DB8-B9F9-3008-98AA-E69ABE371660}</Project>
+      <Name>opencv_annotation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{3DA51642-93B8-3AE8-9428-EECE05B2D55C}</Project>
+      <Name>opencv_calib3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\core\opencv_core.vcxproj">
+      <Project>{04401E23-D799-3690-A94F-5EB44377DD21}</Project>
+      <Name>opencv_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\cudev\opencv_cudev.vcxproj">
+      <Project>{214FC758-C8D5-3717-9FA2-210655F3C358}</Project>
+      <Name>opencv_cudev</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\dnn\opencv_dnn.vcxproj">
+      <Project>{18AD085A-ADDB-3188-BF4A-776D42F1C797}</Project>
+      <Name>opencv_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{D332DFF2-66E7-31AF-A543-69961565E6B6}</Project>
+      <Name>opencv_features2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\flann\opencv_flann.vcxproj">
+      <Project>{7B22EAF4-D4B6-3D41-AC33-33FB36ED5CB9}</Project>
+      <Name>opencv_flann</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{8A9D674C-9E55-3077-9BB6-3B6749FE9D3A}</Project>
+      <Name>opencv_highgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{2109A376-43C5-369E-B2BC-379FC4A75AD0}</Project>
+      <Name>opencv_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{59350BC6-DDE5-3379-BDEE-6FA5523E0E33}</Project>
+      <Name>opencv_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\apps\interactive-calibration\opencv_interactive-calibration.vcxproj">
+      <Project>{872B061E-758C-3221-BA5F-E0AF5EB0900E}</Project>
+      <Name>opencv_interactive-calibration</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\java\jni\opencv_java.vcxproj">
+      <Project>{43599BCA-152D-3CF3-A00D-55D01BA1CF39}</Project>
+      <Name>opencv_java</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml\opencv_ml.vcxproj">
+      <Project>{2124EB75-EBDF-35B2-B986-F94B5318E8CD}</Project>
+      <Name>opencv_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{4631B292-5041-3234-90FD-342FBD6E1CD4}</Project>
+      <Name>opencv_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\calib3d\opencv_perf_calib3d.vcxproj">
+      <Project>{9104638A-1881-3908-8016-0522951DE063}</Project>
+      <Name>opencv_perf_calib3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\core\opencv_perf_core.vcxproj">
+      <Project>{8475B28D-E694-3EC8-A829-4E4772C6FA15}</Project>
+      <Name>opencv_perf_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\dnn\opencv_perf_dnn.vcxproj">
+      <Project>{99272CCA-7EDD-3243-B2E0-481A85B72C25}</Project>
+      <Name>opencv_perf_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\features2d\opencv_perf_features2d.vcxproj">
+      <Project>{54D2A3C5-F260-39A5-A4D6-05B2E1CE868F}</Project>
+      <Name>opencv_perf_features2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\imgcodecs\opencv_perf_imgcodecs.vcxproj">
+      <Project>{C2EC8BB1-B407-35E7-B306-50177A8C9F1C}</Project>
+      <Name>opencv_perf_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\imgproc\opencv_perf_imgproc.vcxproj">
+      <Project>{B81CED36-8F8D-34FC-A638-8D4BC4390089}</Project>
+      <Name>opencv_perf_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\objdetect\opencv_perf_objdetect.vcxproj">
+      <Project>{2C5CFAEF-6527-3337-9E60-ED468BA37E45}</Project>
+      <Name>opencv_perf_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\photo\opencv_perf_photo.vcxproj">
+      <Project>{1473FBC2-99E2-385E-9275-607A6B88E74A}</Project>
+      <Name>opencv_perf_photo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\stitching\opencv_perf_stitching.vcxproj">
+      <Project>{D7190432-3744-387C-A95A-7B57E458C41D}</Project>
+      <Name>opencv_perf_stitching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\video\opencv_perf_video.vcxproj">
+      <Project>{7F9F4CAF-D1D1-3099-9D3E-4DA97E8DEE54}</Project>
+      <Name>opencv_perf_video</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\videoio\opencv_perf_videoio.vcxproj">
+      <Project>{20A521CC-0E64-3717-BC23-0DE5920050F7}</Project>
+      <Name>opencv_perf_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\photo\opencv_photo.vcxproj">
+      <Project>{586F61C2-2342-3709-9527-8515E3099D5D}</Project>
+      <Name>opencv_photo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\stitching\opencv_stitching.vcxproj">
+      <Project>{219CAF47-439E-35B5-9C9D-7FD4D1F6DA1C}</Project>
+      <Name>opencv_stitching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\calib3d\opencv_test_calib3d.vcxproj">
+      <Project>{ABB3F87D-9BA3-33BD-846D-0C63CAFCF9EF}</Project>
+      <Name>opencv_test_calib3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\core\opencv_test_core.vcxproj">
+      <Project>{23D17CB2-CF12-3421-8BFF-E99FD05C3709}</Project>
+      <Name>opencv_test_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\cudev\test\opencv_test_cudev.vcxproj">
+      <Project>{9779EEB7-886A-3E09-921A-1ACD92A01413}</Project>
+      <Name>opencv_test_cudev</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\dnn\opencv_test_dnn.vcxproj">
+      <Project>{04E2631D-0226-3FCA-BBA5-B46801C061AC}</Project>
+      <Name>opencv_test_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\features2d\opencv_test_features2d.vcxproj">
+      <Project>{F8A40125-568B-31D2-86AE-E9AB4188F547}</Project>
+      <Name>opencv_test_features2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\flann\opencv_test_flann.vcxproj">
+      <Project>{E1E95A9C-FC08-398C-9295-29457A8559A2}</Project>
+      <Name>opencv_test_flann</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\highgui\opencv_test_highgui.vcxproj">
+      <Project>{A05BB83C-B32D-314C-B2A6-4B3321EA585C}</Project>
+      <Name>opencv_test_highgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\imgcodecs\opencv_test_imgcodecs.vcxproj">
+      <Project>{4DFE0CD5-4670-332C-900F-DD895A44AC5D}</Project>
+      <Name>opencv_test_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\imgproc\opencv_test_imgproc.vcxproj">
+      <Project>{2EE738BE-39CA-3270-88C1-0864C537D93A}</Project>
+      <Name>opencv_test_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\java\test\pure_test\opencv_test_java.vcxproj">
+      <Project>{1788895F-E25E-32E9-8943-39FA969153C7}</Project>
+      <Name>opencv_test_java</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml\opencv_test_ml.vcxproj">
+      <Project>{0A0F1445-3100-3ED3-9796-9F7B805A192C}</Project>
+      <Name>opencv_test_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\objdetect\opencv_test_objdetect.vcxproj">
+      <Project>{86DB9C3C-1117-3F22-873B-9611EA058375}</Project>
+      <Name>opencv_test_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\photo\opencv_test_photo.vcxproj">
+      <Project>{09CC6EEC-185C-393D-8B92-C34B5A43CD4A}</Project>
+      <Name>opencv_test_photo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\stitching\opencv_test_stitching.vcxproj">
+      <Project>{354C670D-724C-3445-BF50-F7699CE62591}</Project>
+      <Name>opencv_test_stitching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\video\opencv_test_video.vcxproj">
+      <Project>{07421F7B-C602-37B5-B268-0AE411539D90}</Project>
+      <Name>opencv_test_video</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\videoio\opencv_test_videoio.vcxproj">
+      <Project>{0379C14D-7935-36C0-88C5-005704C797FF}</Project>
+      <Name>opencv_test_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ts\opencv_ts.vcxproj">
+      <Project>{E29F545E-14D6-3E65-8B08-454E3A58DD3C}</Project>
+      <Name>opencv_ts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\apps\version\opencv_version.vcxproj">
+      <Project>{522549D2-F38E-3CE6-A434-4A47A5808179}</Project>
+      <Name>opencv_version</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\apps\version\opencv_version_win32.vcxproj">
+      <Project>{8265C398-8385-3F74-96A0-D244C6437B18}</Project>
+      <Name>opencv_version_win32</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\video\opencv_video.vcxproj">
+      <Project>{1DCB5BB8-1C8A-33DF-BC04-07CD6743D086}</Project>
+      <Name>opencv_video</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\videoio\opencv_videoio.vcxproj">
+      <Project>{A413E9EB-068D-329A-B378-F21EBD643FAC}</Project>
+      <Name>opencv_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\.firstpass\videoio\opencv_videoio_plugins.vcxproj">
+      <Project>{CE6C8BF6-07B9-3B9A-BF71-45135749E346}</Project>
+      <Name>opencv_videoio_plugins</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\apps\visualisation\opencv_visualisation.vcxproj">
+      <Project>{80F6A899-E6CD-30AE-AA6C-CAA194F5767B}</Project>
+      <Name>opencv_visualisation</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\quirc\quirc.vcxproj">
+      <Project>{9E251DA6-28AC-3E6A-9901-03781093FC32}</Project>
+      <Name>quirc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

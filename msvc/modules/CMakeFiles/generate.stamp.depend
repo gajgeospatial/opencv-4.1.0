@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+C:/Development/op3d_active/opencv-4.1.0/3rdparty/ffmpeg/ffmpeg.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/CMakeLists.txt
+C:/Development/op3d_active/opencv-4.1.0/modules/gapi/cmake/init.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/videoio/cmake/detect_dc1394.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/videoio/cmake/detect_dshow.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/videoio/cmake/detect_ffmpeg.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/videoio/cmake/detect_gstreamer.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/videoio/cmake/detect_msmf.cmake
+C:/Development/op3d_active/opencv-4.1.0/modules/videoio/cmake/init.cmake
+C:/Development/op3d_active/opencv-4.1.0/msvc/3rdparty/ffmpeg/ffmpeg_version.cmake

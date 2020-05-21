@@ -1,0 +1,33 @@
+# CMake generation dependency list for this directory.
+C:/Development/op3d_active/opencv-4.1.0/modules/cudev/test/CMakeLists.txt
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_arithm_func.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_arithm_func.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_arithm_op.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_arithm_op.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_bitwize_op.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_bitwize_op.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_cmp_op.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_cmp_op.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_color_cvt.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_color_cvt.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_cvt.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_cvt.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_deriv.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_deriv.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_integral.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_integral.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_lut.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_lut.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_pyramids.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_pyramids.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_reduction.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_reduction.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_scan.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_scan.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_split_merge.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_split_merge.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_warp.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_test_warp.cu.obj.depend
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_transpose.cu.obj.cmake.pre-gen
+C:/Development/op3d_active/opencv-4.1.0/msvc/modules/cudev/test/CMakeFiles/opencv_test_cudev.dir/opencv_test_cudev_generated_transpose.cu.obj.depend
+C:/Program Files/CMake/share/cmake-3.14/Modules/FindCUDA/run_nvcc.cmake

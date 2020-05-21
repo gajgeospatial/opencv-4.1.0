@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E29F545E-14D6-3E65-8B08-454E3A58DD3C}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>opencv_ts</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_ts410d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">opencv_ts410d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_ts410d</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">opencv_ts410d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_ts410</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">opencv_ts410</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_ts410</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">opencv_ts410</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\ts\src;..\..\..\modules\ts\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\imgproc\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\cuda_perf.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\cuda_test.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\ocl_perf.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\ocl_test.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\ts_ext.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\ts_gtest.h" />
+    <ClInclude Include="..\..\..\modules\ts\include\opencv2\ts\ts_perf.hpp" />
+    <ClCompile Include="..\..\..\modules\ts\src\cuda_perf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\cuda_test.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ocl_perf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ocl_test.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ts.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ts_arrtest.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ts_func.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ts_gtest.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ts_perf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\ts\src\ts_tags.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClInclude Include="..\..\..\modules\ts\src\precomp.hpp" />
+    <ClInclude Include="..\..\..\modules\ts\src\ts_tags.hpp" />
+    <ClInclude Include="..\..\cvconfig.h" />
+    <ClInclude Include="..\..\opencv2\opencv_modules.hpp" />
+    <ClCompile Include=".\opencv_ts_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\ts\src\precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\opencv_core.vcxproj">
+      <Project>{04401E23-D799-3690-A94F-5EB44377DD21}</Project>
+      <Name>opencv_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\cudev\opencv_cudev.vcxproj">
+      <Project>{214FC758-C8D5-3717-9FA2-210655F3C358}</Project>
+      <Name>opencv_cudev</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\highgui\opencv_highgui.vcxproj">
+      <Project>{8A9D674C-9E55-3077-9BB6-3B6749FE9D3A}</Project>
+      <Name>opencv_highgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{2109A376-43C5-369E-B2BC-379FC4A75AD0}</Project>
+      <Name>opencv_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\imgproc\opencv_imgproc.vcxproj">
+      <Project>{59350BC6-DDE5-3379-BDEE-6FA5523E0E33}</Project>
+      <Name>opencv_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\videoio\opencv_videoio.vcxproj">
+      <Project>{A413E9EB-068D-329A-B378-F21EBD643FAC}</Project>
+      <Name>opencv_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

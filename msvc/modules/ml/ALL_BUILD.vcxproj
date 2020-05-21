@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0477DF17-F7EC-3497-8344-683AFA46DD18}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\icv\include;C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\iw\include;C:\Development\op3d_active\opencv-4.1.0\msvc;C:\Development\op3d_active\opencv-4.1.0\modules\ml\src;C:\Development\op3d_active\opencv-4.1.0\modules\ml\include;C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml;C:\Development\op3d_active\opencv-4.1.0\modules\cudev\include;C:\Development\op3d_active\opencv-4.1.0\modules\core\include;C:\Development\op3d_active\opencv-4.1.0\modules\ts\include;C:\Development\op3d_active\opencv-4.1.0\modules\imgcodecs\include;C:\Development\op3d_active\opencv-4.1.0\modules\videoio\include;C:\Development\op3d_active\opencv-4.1.0\modules\imgproc\include;C:\Development\op3d_active\opencv-4.1.0\modules\highgui\include;C:\Development\op3d_active\gdal-3.1.0\frmts;C:\Development\op3d_active\gdal-3.1.0\alg;C:\Development\op3d_active\gdal-3.1.0\gcore;C:\Development\op3d_active\gdal-3.1.0\port;C:\Development\op3d_active\gdal-3.1.0\ogr;C:\Development\op3d_active\gdal-3.1.0\ogr\ogrsf_frmts;C:\Development\op3d_active\eigen-3.3.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\icv\include;C:\Development\op3d_active\opencv-4.1.0\msvc\3rdparty\ippicv\ippicv_win\iw\include;C:\Development\op3d_active\opencv-4.1.0\msvc;C:\Development\op3d_active\opencv-4.1.0\modules\ml\src;C:\Development\op3d_active\opencv-4.1.0\modules\ml\include;C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml;C:\Development\op3d_active\opencv-4.1.0\modules\cudev\include;C:\Development\op3d_active\opencv-4.1.0\modules\core\include;C:\Development\op3d_active\opencv-4.1.0\modules\ts\include;C:\Development\op3d_active\opencv-4.1.0\modules\imgcodecs\include;C:\Development\op3d_active\opencv-4.1.0\modules\videoio\include;C:\Development\op3d_active\opencv-4.1.0\modules\imgproc\include;C:\Development\op3d_active\opencv-4.1.0\modules\highgui\include;C:\Development\op3d_active\gdal-3.1.0\frmts;C:\Development\op3d_active\gdal-3.1.0\alg;C:\Development\op3d_active\gdal-3.1.0\gcore;C:\Development\op3d_active\gdal-3.1.0\port;C:\Development\op3d_active\gdal-3.1.0\ogr;C:\Development\op3d_active\gdal-3.1.0\ogr\ogrsf_frmts;C:\Development\op3d_active\eigen-3.3.7;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\ml\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Development/op3d_active/opencv-4.1.0/modules/ml/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Development/op3d_active/opencv-4.1.0 -BC:/Development/op3d_active/opencv-4.1.0/msvc --check-stamp-file C:/Development/op3d_active/opencv-4.1.0/msvc/modules/ml/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Development/op3d_active/opencv-4.1.0/modules/ml/CMakeLists.txt;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\dllmain.cpp.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\vs_version.rc.in;C:\Development\op3d_active\opencv-4.1.0\modules\ml\CMakeLists.txt;C:\Development\op3d_active\opencv-4.1.0\modules\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Development/op3d_active/opencv-4.1.0/modules/ml/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Development/op3d_active/opencv-4.1.0 -BC:/Development/op3d_active/opencv-4.1.0/msvc --check-stamp-file C:/Development/op3d_active/opencv-4.1.0/msvc/modules/ml/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Development/op3d_active/opencv-4.1.0/modules/ml/CMakeLists.txt;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\dllmain.cpp.in;C:\Development\op3d_active\opencv-4.1.0\cmake\templates\vs_version.rc.in;C:\Development\op3d_active\opencv-4.1.0\modules\ml\CMakeLists.txt;C:\Development\op3d_active\opencv-4.1.0\modules\ml\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\ZERO_CHECK.vcxproj">
+      <Project>{AC6C6E05-5015-303A-9CFD-F61950C6B200}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml\opencv_ml.vcxproj">
+      <Project>{2124EB75-EBDF-35B2-B986-F94B5318E8CD}</Project>
+      <Name>opencv_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\ml\opencv_test_ml.vcxproj">
+      <Project>{0A0F1445-3100-3ED3-9796-9F7B805A192C}</Project>
+      <Name>opencv_test_ml</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

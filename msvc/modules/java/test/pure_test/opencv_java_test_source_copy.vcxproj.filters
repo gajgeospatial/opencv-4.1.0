@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\res\drawable\chessboard.jpg">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\res\drawable\icon.png">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\res\drawable\lena.png">
+      <Filter>Resources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\res\layout\main.xml" />
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\res\raw\lbpcascade_frontalface.xml" />
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\res\values\strings.xml" />
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\common_test\src\org\opencv\test\utils\ConvertersTest.java" />
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\49aa945991bce0391d89bdf02149bc7b\opencv_java_test_source_copy.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_java_test_source_copy.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\java\test\pure_test\CMakeFiles\opencv_java_test_source_copy" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7279CE8B-7241-3FB4-9705-D5B0C64F8FB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{774ECEAF-4C80-38DE-93B6-9743B4ABA611}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

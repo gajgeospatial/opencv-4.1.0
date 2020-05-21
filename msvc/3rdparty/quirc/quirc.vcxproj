@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9E251DA6-28AC-3E6A-9901-03781093FC32}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>quirc</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">quircd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">quircd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">quircd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">quircd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">quirc</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">quirc</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">quirc</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">quirc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86 /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ProgramDataBaseFileName>$(OutDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;_VARIADIC_MAX=10;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\3rdparty\quirc\include;..\ippicv\ippicv_win\icv\include;..\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /IGNORE:4221</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\3rdparty\quirc\include\quirc.h" />
+    <ClInclude Include="..\..\..\3rdparty\quirc\include\quirc_internal.h" />
+    <ClCompile Include="..\..\..\3rdparty\quirc\src\decode.c" />
+    <ClCompile Include="..\..\..\3rdparty\quirc\src\quirc.c" />
+    <ClCompile Include="..\..\..\3rdparty\quirc\src\version_db.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

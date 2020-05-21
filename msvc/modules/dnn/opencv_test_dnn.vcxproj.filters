@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\dnn\test\npy_blob.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_backends.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_caffe_importer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_common.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_darknet_importer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_googlenet.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_halide_layers.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_ie_models.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_layers.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_misc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_nms.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_onnx_importer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_tf_importer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\dnn\test\test_torch_importer.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include=".\opencv_test_dnn_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\dnn\test\npy_blob.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\dnn\test\test_common.hpp">
+      <Filter>test_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\dnn\test\test_common.impl.hpp">
+      <Filter>test_common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\dnn\test\test_precomp.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0393671A-94DD-37B7-BA8D-66542B2A2F86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{E1CF357E-514D-31A8-B2CC-D48DA68E6D3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test_common">
+      <UniqueIdentifier>{91FE41EE-0662-3DB6-94D4-C9DE7FCDF0EB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

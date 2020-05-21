@@ -1,0 +1,979 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1788895F-E25E-32E9-8943-39FA969153C7}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>opencv_test_java</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\..\..\;..\..\..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Copying src/org/opencv/test/OpenCVTestCase.java</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Copying src/org/opencv/test/OpenCVTestRunner.java</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java ..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying lib/junit-4.11.jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Copying lib/junit-4.11.jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copying lib/junit-4.11.jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Copying lib/junit-4.11.jar</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying lib/junit-4.11.jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Copying lib/junit-4.11.jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copying lib/junit-4.11.jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Copying lib/junit-4.11.jar</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar ..\..\..\..\java_test\lib\junit-4.11.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\java_test\lib\junit-4.11.jar</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying build.xml</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Copying build.xml</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copying build.xml</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Copying build.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\java_test\build.xml</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\java_test\build.xml</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\java_test\build.xml</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\java_test\build.xml</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying build.xml</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Copying build.xml</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copying build.xml</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Copying build.xml</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\..\modules\java\test\pure_test\build.xml ..\..\..\..\java_test\build.xml
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule;..\..\..\..\..\modules\java\test\pure_test\build.xml;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\java_test\build.xml</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\java_test\build.xml</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\java_test\build.xml</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\java_test\build.xml</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Copying the OpenCV jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Copying the OpenCV jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Copying the OpenCV jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Copying the OpenCV jar</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Copying the OpenCV jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Copying the OpenCV jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Copying the OpenCV jar</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Copying the OpenCV jar</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E copy_if_different ..\..\..\..\bin\opencv-410.jar ..\..\..\..\java_test\bin\opencv-410.jar
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule;..\..\..\..\bin\opencv-410.jar;..\..\..\..\CMakeFiles\dephelper\opencv_java_jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\java_test\bin\opencv-410.jar</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build Java tests</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Build Java tests</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build Java tests</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Build Java tests</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build Java tests</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Build Java tests</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build Java tests</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Build Java tests</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+cd ..\..\..\..\java_test
+if %errorlevel% neq 0 goto :cmEnd
+..\..\..\..\..\..\..\..\
+if %errorlevel% neq 0 goto :cmEnd
+call ..\..\..\..\..\..\..\apache-ant-1.9.1\bin\ant.bat -noinput -k build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule;..\..\..\..\CMakeFiles\dephelper\opencv_java_test_source_copy;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestCase.java;..\..\..\..\..\modules\java\test\pure_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\java_test\src\org\opencv\test\OpenCVTestRunner.java;..\..\..\..\..\modules\java\test\pure_test\lib\junit-4.11.jar;..\..\..\..\java_test\lib\junit-4.11.jar;..\..\..\..\java_test\build.xml;..\..\..\..\..\modules\java\test\pure_test\build.xml;..\..\..\..\bin\opencv-410.jar;..\..\..\..\java_test\bin\opencv-410.jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\java_test\build\jar\opencv-test.jar</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Debug\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Debug\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Debug\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Debug\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\CMakeFiles\opencv_test_java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">.\CMakeFiles\opencv_test_java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\opencv_test_java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\opencv_test_java</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Release\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Release\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Release\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\..\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule;..\..\..\..\lib\Release\opencv_java410.dll;..\..\..\..\java_test\build\jar\opencv-test.jar;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\CMakeFiles\opencv_test_java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">.\CMakeFiles\opencv_test_java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\opencv_test_java</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\opencv_test_java</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\java\test\pure_test\CMakeFiles\opencv_test_java" />
+    <XML Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\pure_test\build.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\jni\opencv_java.vcxproj">
+      <Project>{43599BCA-152D-3CF3-A00D-55D01BA1CF39}</Project>
+      <Name>opencv_java</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

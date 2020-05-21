@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestCase.java.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\b292f099249dad7d2e3d9854d6e55a68\OpenCVTestRunner.java.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\332004670b7b1298acaa97afcb63ad76\junit-4.11.jar.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\380eaeb5e913a1bde8b4cc70a909f204\build.xml.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\30a82fbc5c0c8baf72ffff5bd0edebc1\opencv-410.jar.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\515176bdbb62f65ba92e43befcead9d2\opencv-test.jar.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\821fa3ebbd9f403d8f0931eb8f6abf73\opencv_test_java.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\java\test\pure_test\CMakeFiles\opencv_test_java" />
+  </ItemGroup>
+  <ItemGroup>
+    <XML Include="C:\Development\op3d_active\opencv-4.1.0\modules\java\test\pure_test\build.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7279CE8B-7241-3FB4-9705-D5B0C64F8FB7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{774ECEAF-4C80-38DE-93B6-9743B4ABA611}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

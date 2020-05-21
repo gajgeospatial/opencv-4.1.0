@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B66C9659-3352-3B90-93D2-7DDE380624A1}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>gen_opencv_python_source</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate files for Python bindings and documentation</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Generate files for Python bindings and documentation</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate files for Python bindings and documentation</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Generate files for Python bindings and documentation</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate files for Python bindings and documentation</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Generate files for Python bindings and documentation</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate files for Python bindings and documentation</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Generate files for Python bindings and documentation</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\python.exe" ..\..\..\modules\python\bindings\..\\src2\gen2.py .\ .\headers.txt
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\c787208fb4ff5004be64668a35e929f8\pyopencv_generated_include.h.rule;..\..\..\modules\python\src2\gen2.py;..\..\..\modules\python\src2\hdr_parser.py;..\..\..\modules\core\include\opencv2\core.hpp;..\..\..\modules\core\include\opencv2\core\affine.hpp;..\..\..\modules\core\include\opencv2\core\base.hpp;..\..\..\modules\core\include\opencv2\core\bindings_utils.hpp;..\..\..\modules\core\include\opencv2\core\bufferpool.hpp;..\..\..\modules\core\include\opencv2\core\check.hpp;..\..\..\modules\core\include\opencv2\core\core.hpp;..\..\..\modules\core\include\opencv2\core\cuda.hpp;..\..\..\modules\core\include\opencv2\core\cuda_stream_accessor.hpp;..\..\..\modules\core\include\opencv2\core\cuda_types.hpp;..\..\..\modules\core\include\opencv2\core\cvstd.hpp;..\..\..\modules\core\include\opencv2\core\cvstd_wrapper.hpp;..\..\..\modules\core\include\opencv2\core\directx.hpp;..\..\..\modules\core\include\opencv2\core\eigen.hpp;..\..\..\modules\core\include\opencv2\core\fast_math.hpp;..\..\..\modules\core\include\opencv2\core\mat.hpp;..\..\..\modules\core\include\opencv2\core\matx.hpp;..\..\..\modules\core\include\opencv2\core\neon_utils.hpp;..\..\..\modules\core\include\opencv2\core\ocl.hpp;..\..\..\modules\core\include\opencv2\core\ocl_genbase.hpp;..\..\..\modules\core\include\opencv2\core\opengl.hpp;..\..\..\modules\core\include\opencv2\core\operations.hpp;..\..\..\modules\core\include\opencv2\core\optim.hpp;..\..\..\modules\core\include\opencv2\core\ovx.hpp;..\..\..\modules\core\include\opencv2\core\persistence.hpp;..\..\..\modules\core\include\opencv2\core\saturate.hpp;..\..\..\modules\core\include\opencv2\core\softfloat.hpp;..\..\..\modules\core\include\opencv2\core\sse_utils.hpp;..\..\..\modules\core\include\opencv2\core\traits.hpp;..\..\..\modules\core\include\opencv2\core\types.hpp;..\..\..\modules\core\include\opencv2\core\utility.hpp;..\..\..\modules\core\include\opencv2\core\va_intel.hpp;..\..\..\modules\core\include\opencv2\core\version.hpp;..\..\..\modules\core\include\opencv2\core\vsx_utils.hpp;..\..\..\modules\core\misc\python\shadow_umat.hpp;..\..\..\modules\flann\include\opencv2\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann.hpp;..\..\..\modules\flann\include\opencv2\flann\flann_base.hpp;..\..\..\modules\flann\include\opencv2\flann\miniflann.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\hal\hal.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\imgproc.hpp;..\..\..\modules\imgproc\include\opencv2\imgproc\detail\gcgraph.hpp;..\..\..\modules\ml\include\opencv2\ml.hpp;..\..\..\modules\ml\include\opencv2\ml\ml.hpp;..\..\..\modules\photo\include\opencv2\photo.hpp;..\..\..\modules\photo\include\opencv2\photo\cuda.hpp;..\..\..\modules\photo\include\opencv2\photo\photo.hpp;..\..\..\modules\dnn\include\opencv2\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\all_layers.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dict.hpp;..\..\..\modules\dnn\include\opencv2\dnn\dnn.hpp;..\..\..\modules\dnn\include\opencv2\dnn\layer.hpp;..\..\..\modules\dnn\include\opencv2\dnn\shape_utils.hpp;..\..\..\modules\dnn\include\opencv2\dnn\version.hpp;..\..\..\modules\dnn\misc\python\shadow_async_mat.hpp;..\..\..\modules\features2d\include\opencv2\features2d.hpp;..\..\..\modules\features2d\include\opencv2\features2d\features2d.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs.hpp;..\..\..\modules\imgcodecs\include\opencv2\imgcodecs\imgcodecs.hpp;..\..\..\modules\videoio\include\opencv2\videoio.hpp;..\..\..\modules\videoio\include\opencv2\videoio\registry.hpp;..\..\..\modules\videoio\include\opencv2\videoio\videoio.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d.hpp;..\..\..\modules\calib3d\include\opencv2\calib3d\calib3d.hpp;..\..\..\modules\highgui\include\opencv2\highgui.hpp;..\..\..\modules\highgui\include\opencv2\highgui\highgui.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect.hpp;..\..\..\modules\objdetect\include\opencv2\objdetect\objdetect.hpp;..\..\..\modules\stitching\include\opencv2\stitching.hpp;..\..\..\modules\stitching\include\opencv2\stitching\warpers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\autocalib.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\blenders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\camera.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\exposure_compensate.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\matchers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\motion_estimators.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\seam_finders.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\timelapsers.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\util.hpp;..\..\..\modules\stitching\include\opencv2\stitching\detail\warpers.hpp;..\..\..\modules\video\include\opencv2\video.hpp;..\..\..\modules\video\include\opencv2\video\background_segm.hpp;..\..\..\modules\video\include\opencv2\video\tracking.hpp;..\..\..\modules\video\include\opencv2\video\video.hpp;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Development\op3d_active\opencv-4.1.0\msvc\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\CMakeFiles\faa686af0e435e0c00e000b01e04a3b1\gen_opencv_python_source.rule;.\pyopencv_generated_include.h;.\pyopencv_generated_funcs.h;.\pyopencv_generated_types.h;.\pyopencv_generated_type_reg.h;.\pyopencv_generated_ns_reg.h;.\pyopencv_signatures.json;%(AdditionalInputs);</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.\CMakeFiles\gen_opencv_python_source</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Development\op3d_active\opencv-4.1.0\msvc\modules\python_bindings_generator\CMakeFiles\gen_opencv_python_source" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

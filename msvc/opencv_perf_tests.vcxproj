@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{142147BA-0297-3A80-9FA9-6366E4B5C539}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>opencv_perf_tests</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>.\3rdparty\ippicv\ippicv_win\icv\include;.\3rdparty\ippicv\ippicv_win\iw\include;.\;..\..\$(GDAL_DIR)\frmts;..\..\$(GDAL_DIR)\alg;..\..\$(GDAL_DIR)\gcore;..\..\$(GDAL_DIR)\port;..\..\$(GDAL_DIR)\ogr;..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include=".\modules\calib3d\opencv_perf_calib3d.vcxproj">
+      <Project>{9104638A-1881-3908-8016-0522951DE063}</Project>
+      <Name>opencv_perf_calib3d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\core\opencv_perf_core.vcxproj">
+      <Project>{8475B28D-E694-3EC8-A829-4E4772C6FA15}</Project>
+      <Name>opencv_perf_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\dnn\opencv_perf_dnn.vcxproj">
+      <Project>{99272CCA-7EDD-3243-B2E0-481A85B72C25}</Project>
+      <Name>opencv_perf_dnn</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\features2d\opencv_perf_features2d.vcxproj">
+      <Project>{54D2A3C5-F260-39A5-A4D6-05B2E1CE868F}</Project>
+      <Name>opencv_perf_features2d</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\imgcodecs\opencv_perf_imgcodecs.vcxproj">
+      <Project>{C2EC8BB1-B407-35E7-B306-50177A8C9F1C}</Project>
+      <Name>opencv_perf_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\imgproc\opencv_perf_imgproc.vcxproj">
+      <Project>{B81CED36-8F8D-34FC-A638-8D4BC4390089}</Project>
+      <Name>opencv_perf_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\objdetect\opencv_perf_objdetect.vcxproj">
+      <Project>{2C5CFAEF-6527-3337-9E60-ED468BA37E45}</Project>
+      <Name>opencv_perf_objdetect</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\photo\opencv_perf_photo.vcxproj">
+      <Project>{1473FBC2-99E2-385E-9275-607A6B88E74A}</Project>
+      <Name>opencv_perf_photo</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\stitching\opencv_perf_stitching.vcxproj">
+      <Project>{D7190432-3744-387C-A95A-7B57E458C41D}</Project>
+      <Name>opencv_perf_stitching</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\video\opencv_perf_video.vcxproj">
+      <Project>{7F9F4CAF-D1D1-3099-9D3E-4DA97E8DEE54}</Project>
+      <Name>opencv_perf_video</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\modules\videoio\opencv_perf_videoio.vcxproj">
+      <Project>{20A521CC-0E64-3717-BC23-0DE5920050F7}</Project>
+      <Name>opencv_perf_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\video\test\ocl\test_bgfg_mog2.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\ocl\test_dis.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\ocl\test_optflow_farneback.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\ocl\test_optflowpyrlk.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_OF_accuracy.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_OF_reproducibility.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_accum.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_camshift.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_ecc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_estimaterigid.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_kalman.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\video\test\test_optflowpyrlk.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include=".\opencv_test_video_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\video\test\test_precomp.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0393671A-94DD-37B7-BA8D-66542B2A2F86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{E1CF357E-514D-31A8-B2CC-D48DA68E6D3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ocl">
+      <UniqueIdentifier>{DDEF4EFC-6BF8-3D72-9FB4-DF70B6C8344C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

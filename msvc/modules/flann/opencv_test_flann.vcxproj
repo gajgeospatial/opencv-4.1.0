@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|Win32">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Debug|x64">
+      <Configuration>vs2017_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|Win32">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="vs2017_Release|x64">
+      <Configuration>vs2017_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E1E95A9C-FC08-398C-9295-29457A8559A2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>opencv_test_flann</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">opencv_test_flannd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">opencv_test_flannd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">opencv_test_flannd</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">opencv_test_flannd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">.exe</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">$(ProjectName).dir\vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">opencv_test_flann</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">opencv_test_flann</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">opencv_test_flann</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">opencv_test_flann</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">.exe</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410d.lib;opencv_flann410d.lib;opencv_highgui410d.lib;ippiwd.lib;ippicvmt.lib;cudart_static.lib;lib.lib;nppc.lib;lib.lib;nppial.lib;lib.lib;nppicc.lib;lib.lib;nppicom.lib;lib.lib;nppidei.lib;lib.lib;nppif.lib;lib.lib;nppig.lib;lib.lib;nppim.lib;lib.lib;nppist.lib;lib.lib;nppisu.lib;lib.lib;nppitc.lib;lib.lib;npps.lib;lib.lib;cudnn.lib;lib.lib;cufft.lib;Win32;v10.2;x64;opencv_videoio410d.lib;opencv_imgcodecs410d.lib;opencv_imgproc410d.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_core410d.lib;opencv_cudev410d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flannd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410d.lib;opencv_flann410d.lib;opencv_highgui410d.lib;ippiwd.lib;ippicvmt.lib;cudart_static.lib;lib.lib;nppc.lib;lib.lib;nppial.lib;lib.lib;nppicc.lib;lib.lib;nppicom.lib;lib.lib;nppidei.lib;lib.lib;nppif.lib;lib.lib;nppig.lib;lib.lib;nppim.lib;lib.lib;nppist.lib;lib.lib;nppisu.lib;lib.lib;nppitc.lib;lib.lib;npps.lib;lib.lib;cudnn.lib;lib.lib;cufft.lib;Win32;v10.2;x64;opencv_videoio410d.lib;opencv_imgcodecs410d.lib;opencv_imgproc410d.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_core410d.lib;opencv_cudev410d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flannd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410d.lib;opencv_flann410d.lib;opencv_highgui410d.lib;ippiwd.lib;ippicvmt.lib;cudart_static.lib;lib.lib;nppc.lib;lib.lib;nppial.lib;lib.lib;nppicc.lib;lib.lib;nppicom.lib;lib.lib;nppidei.lib;lib.lib;nppif.lib;lib.lib;nppig.lib;lib.lib;nppim.lib;lib.lib;nppist.lib;lib.lib;nppisu.lib;lib.lib;nppitc.lib;lib.lib;npps.lib;lib.lib;cudnn.lib;lib.lib;cufft.lib;Win32;v10.2;x64;opencv_videoio410d.lib;opencv_imgcodecs410d.lib;opencv_imgproc410d.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_core410d.lib;opencv_cudev410d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) </AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flannd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410d.lib;opencv_flann410d.lib;opencv_highgui410d.lib;ipp_iw.lib;ippcoremt.lib;ippimt.lib;ippsmt.lib;ippcvmt.lib;ippccmt.lib;ippvmmt.lib;cudart_static.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_videoio410d.lib;opencv_imgcodecs410d.lib;opencv_imgproc410d.lib;opencv_core410d.lib;opencv_cudev410d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) </AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flannd.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410.lib;opencv_flann410.lib;opencv_highgui410.lib;ippiw.lib;ippicvmt.lib;cudart_static.lib;lib.lib;nppc.lib;lib.lib;nppial.lib;lib.lib;nppicc.lib;lib.lib;nppicom.lib;lib.lib;nppidei.lib;lib.lib;nppif.lib;lib.lib;nppig.lib;lib.lib;nppim.lib;lib.lib;nppist.lib;lib.lib;nppisu.lib;lib.lib;nppitc.lib;lib.lib;npps.lib;lib.lib;cudnn.lib;lib.lib;cufft.lib;Win32;v10.2;x64;opencv_videoio410.lib;opencv_imgcodecs410.lib;opencv_imgproc410.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_core410.lib;opencv_cudev410.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flann.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410.lib;opencv_flann410.lib;opencv_highgui410.lib;ippiw.lib;ippicvmt.lib;cudart_static.lib;lib.lib;nppc.lib;lib.lib;nppial.lib;lib.lib;nppicc.lib;lib.lib;nppicom.lib;lib.lib;nppidei.lib;lib.lib;nppif.lib;lib.lib;nppig.lib;lib.lib;nppim.lib;lib.lib;nppist.lib;lib.lib;nppisu.lib;lib.lib;nppitc.lib;lib.lib;npps.lib;lib.lib;cudnn.lib;lib.lib;cufft.lib;Win32;v10.2;x64;opencv_videoio410.lib;opencv_imgcodecs410.lib;opencv_imgproc410.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_core410.lib;opencv_cudev410.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flann.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410.lib;opencv_flann410.lib;opencv_highgui410.lib;ippiw.lib;ippicvmt.lib;cudart_static.lib;lib.lib;nppc.lib;lib.lib;nppial.lib;lib.lib;nppicc.lib;lib.lib;nppicom.lib;lib.lib;nppidei.lib;lib.lib;nppif.lib;lib.lib;nppig.lib;lib.lib;nppim.lib;lib.lib;nppist.lib;lib.lib;nppisu.lib;lib.lib;nppitc.lib;lib.lib;npps.lib;lib.lib;cudnn.lib;lib.lib;cufft.lib;Win32;v10.2;x64;opencv_videoio410.lib;opencv_imgcodecs410.lib;opencv_imgproc410.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_core410.lib;opencv_cudev410.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) </AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flann.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(INTEL_IPP_DIR)\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4127;4251;4324;4275;4512;4589</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ProcessorNumber>4</ProcessorNumber>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;NDEBUG;__OPENCV_TESTS=1;_VARIADIC_MAX=10;__OPENCV_BUILD=1;_USE_MATH_DEFINES;__STDC_CONSTANT_MACROS;__STDC_LIMIT_MACROS;__STDC_FORMAT_MACROS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\3rdparty\ippicv\ippicv_win\icv\include;..\..\3rdparty\ippicv\ippicv_win\iw\include;..\..\;..\..\..\modules\flann\src;..\..\..\modules\flann\include;.\;..\..\..\modules\cudev\include;..\..\..\modules\core\include;..\..\..\modules\ts\include;..\..\..\modules\imgcodecs\include;..\..\..\modules\videoio\include;..\..\..\modules\imgproc\include;..\..\..\modules\highgui\include;..\..\..\..\$(GDAL_DIR)\frmts;..\..\..\..\$(GDAL_DIR)\alg;..\..\..\..\$(GDAL_DIR)\gcore;..\..\..\..\$(GDAL_DIR)\port;..\..\..\..\$(GDAL_DIR)\ogr;..\..\..\..\$(GDAL_DIR)\ogr\ogrsf_frmts;..\..\..\..\$(EIGEN3_DIR);%(AdditionalIncludeDirectories);</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opencv_ts410.lib;opencv_flann410.lib;opencv_highgui410.lib;ipp_iw.lib;ippcoremt.lib;ippimt.lib;ippsmt.lib;ippcvmt.lib;ippccmt.lib;ippvmmt.lib;cudart_static.lib;nppc.lib;nppial.lib;nppicc.lib;nppicom.lib;nppidei.lib;nppif.lib;nppig.lib;nppim.lib;nppist.lib;nppisu.lib;nppitc.lib;npps.lib;cudnn.lib;cufft.lib;opencv_videoio410.lib;opencv_imgcodecs410.lib;opencv_imgproc410.lib;opencv_core410.lib;opencv_cudev410.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)vc$(PlatformToolsetVersion)\$(Platform)\$(Configuration);$(INTEL_IPP_DIR)\lib\intel64_win;$(CUDA_LIB_PATH)\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) </AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)opencv_test_flann.lib</ImportLibrary>
+      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\flann\test\test_lshtable_badarg.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\flann\test\test_main.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Use</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClInclude Include="..\..\..\modules\flann\test\test_precomp.hpp" />
+    <ClCompile Include=".\opencv_test_flann_pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Debug|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|Win32'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='vs2017_Release|x64'">..\..\..\modules\flann\test\test_precomp.hpp</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\opencv_core.vcxproj">
+      <Project>{04401E23-D799-3690-A94F-5EB44377DD21}</Project>
+      <Name>opencv_core</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\cudev\opencv_cudev.vcxproj">
+      <Project>{214FC758-C8D5-3717-9FA2-210655F3C358}</Project>
+      <Name>opencv_cudev</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include=".\opencv_flann.vcxproj">
+      <Project>{7B22EAF4-D4B6-3D41-AC33-33FB36ED5CB9}</Project>
+      <Name>opencv_flann</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\highgui\opencv_highgui.vcxproj">
+      <Project>{8A9D674C-9E55-3077-9BB6-3B6749FE9D3A}</Project>
+      <Name>opencv_highgui</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\imgcodecs\opencv_imgcodecs.vcxproj">
+      <Project>{2109A376-43C5-369E-B2BC-379FC4A75AD0}</Project>
+      <Name>opencv_imgcodecs</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\imgproc\opencv_imgproc.vcxproj">
+      <Project>{59350BC6-DDE5-3379-BDEE-6FA5523E0E33}</Project>
+      <Name>opencv_imgproc</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\ts\opencv_ts.vcxproj">
+      <Project>{E29F545E-14D6-3E65-8B08-454E3A58DD3C}</Project>
+      <Name>opencv_ts</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="..\videoio\opencv_videoio.vcxproj">
+      <Project>{A413E9EB-068D-329A-B378-F21EBD643FAC}</Project>
+      <Name>opencv_videoio</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_arithm.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_channels.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_dft.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_gemm.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_image2d.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_matrix_expr.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_matrix_operation.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\ocl\test_opencl.cpp">
+      <Filter>Src\ocl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_arithm.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_concatenation.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_conjugate_gradient.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_countnonzero.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_downhill_simplex.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_ds.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_dxt.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_eigen.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_hal_core.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_intrin.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_io.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_logtagconfigparser.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_logtagmanager.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_lpsolver.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_mat.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_math.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_misc.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_operations.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_ptr.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_rand.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_rotatedrect.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_umat.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\modules\core\test\test_utils.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include=".\opencv_test_core_pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\modules\core\test\test_intrin128.simd.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\core\test\test_intrin256.simd.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\core\test\test_intrin512.simd.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\core\test\test_intrin_utils.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\modules\core\test\test_precomp.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{0393671A-94DD-37B7-BA8D-66542B2A2F86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{E1CF357E-514D-31A8-B2CC-D48DA68E6D3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\ocl">
+      <UniqueIdentifier>{DDEF4EFC-6BF8-3D72-9FB4-DF70B6C8344C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
